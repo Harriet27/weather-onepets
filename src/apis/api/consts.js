@@ -1,0 +1,1 @@
+export const API_URL = 'https://api.open-meteo.com/v1/forecast?latitude=-6.1933950356945235&longitude=106.82190388069255&current=temperature_2m&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&timezone=Asia%2FBangkok&forecast_days=1'
