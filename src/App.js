@@ -30,7 +30,7 @@ function App() {
   if (isLoading) return null;
 
   return (
-    <div className="App" style={{ margin: '1.5rem' }}>
+    <div className="App" style={{ margin: '2.5rem' }}>
       <h1>Daily Weather Data</h1>
       <div style={{ margin: '1.5rem 0' }}>
         <p>
