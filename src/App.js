@@ -9,6 +9,7 @@ import {
   PointElement,
   LinearScale,
 } from 'chart.js';
+import { formatDate } from './utils/date';
 
 Chart.register(
   CategoryScale,
@@ -29,11 +30,18 @@ function App() {
   if (isLoading) return null;
 
   return (
-    <div className="App">
+    <div className="App" style={{ margin: '1.5rem' }}>
       <h1>Weather Line Chart</h1>
+      <div style={{ margin: '1.5rem 0' }}>
+        <p>
+          <b>Time Now:</b> {formatDate(weatherData.current.time)}
+        </p>
+        <p>
+          <b>Temperature Now:</b> {weatherData.current.temperature_2m}
+        </p>
+      </div>
       <Line
         data={{
-          // x-axis label values
           labels: [
             "00:00",
             "01:00",
@@ -65,10 +73,10 @@ function App() {
               label: "°C hourly",
               data: weatherData.hourly.temperature_2m,
               fill: false,
-              borderWidth:4,
+              borderWidth: 4,
               backgroundColor: "rgb(255, 99, 132)",
-              borderColor:'green',
-              responsive:true
+              borderColor: 'lightblue',
+              responsive: true,
             },
           ],
         }}
