@@ -31,13 +31,19 @@ function App() {
 
   return (
     <div className="App" style={{ margin: '1.5rem' }}>
-      <h1>Weather Line Chart</h1>
+      <h1>Daily Weather Data</h1>
       <div style={{ margin: '1.5rem 0' }}>
         <p>
           <b>Time Now:</b> {formatDate(weatherData.current.time)}
         </p>
         <p>
-          <b>Temperature Now:</b> {weatherData.current.temperature_2m}
+          <b>Temperature Now:</b> {weatherData.current.temperature_2m}°C
+        </p>
+        <p>
+          <b>Today's Min Temperature:</b> {weatherData.daily.temperature_2m_min}°C
+        </p>
+        <p>
+          <b>Today's Max Temperature:</b> {weatherData.daily.temperature_2m_max}°C
         </p>
       </div>
       <Line
